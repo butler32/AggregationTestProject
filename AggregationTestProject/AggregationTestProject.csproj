@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="1.1.2" />
+    <PackageReference Include="log4net" Version="3.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Cognex.DataMan.SDK.Discovery.PC">
+      <HintPath>..\..\promark-client-agg-cognex\SDKs\Cognex.DataMan.SDK.Discovery.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.PC">
+      <HintPath>..\..\promark-client-agg-cognex\SDKs\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.Utils.PC">
+      <HintPath>..\..\promark-client-agg-cognex\SDKs\Cognex.DataMan.SDK.Utils.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CoreScanner">
+      <HintPath>..\..\promark-client-agg-cognex\SDKs\Interop.CoreScanner.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+^XA
+^FO#VDMX#V,#VDMY#V
+^BXN,#VDMModuleWidth#V,200,#VDMModuleCount#V,#VDMModuleCount#V,1,_,1
+^FH>
+^FD#VCODE#V^FS
+
+^FO#VHeaderX#V,#VGTINY#V
+^A0N,#VFontSize#V,#VFontSize#V
+^FDCODE^FS
+
+^FO#VValueX#V,#VGTINY#V
+^A0N,#VFontSize#V,#VFontSize#V
+^FD#VCODE#V^FS
+
+^XZ

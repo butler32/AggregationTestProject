@@ -1,0 +1,250 @@
+﻿<UserControl x:Class="AggregationTestProject.Views.MissionInfoPresenter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AggregationTestProject.Views" xmlns:viewmodels="clr-namespace:AggregationTestProject.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:CurrentMissionViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Id: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Id}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="DateAt: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.DateAt}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="DateAtDateTime: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.DateAtDateTime}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="BoxCounter: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.BoxCounter}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Parent box counter: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.ParentBoxCounter}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Box type Id: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.CodeTypeId}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Is one agg level: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.IsOneAgglevel}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Need to mark: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.NeedToMark}" FontSize="15"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Id: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Id}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Date at: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.DateAt}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Date at time: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.DateAtDateTime}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Number: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Number}" FontSize="15"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Box code: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.BoxCode}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Box format: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.BoxFormat}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Box format ipl: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.BoxFormatItemsPerLayer}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Box format lq: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.BoxFormatLayersQuantity}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Is box code ean13: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.IsBoxCodeEan13}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Pallet format: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.PalletFormat}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Parent box format: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.ParentBoxFormat}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Volume: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Package.Volume}" FontSize="15"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="3">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Barcodeshelflife: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.BarcodeShelfLife}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Barcodeshelflifeunit: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.BarcodeShelfLifeUnit}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Full name: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.FullName}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Gtin: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.Gtin}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="Image: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.Image}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="more info: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.MoreInfo}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="name: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.Name}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="shelflife: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.ShelfLife}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="standard: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.Standard}" FontSize="15"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Label Content="type: " FontSize="15"/>
+                <Label Content="{Binding CurrentMission.Lot.Product.Type}" FontSize="15"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <Button Content="Get current task" Command="{Binding GetCurrentTaskCommand}" VerticalAlignment="Bottom" Height="Auto" Width="Auto"/>
+
+    </Grid>
+</UserControl>
